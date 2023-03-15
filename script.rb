@@ -1,16 +1,18 @@
 num_array = [4,3,78,2,0,2]
 
   def bubble_sort(num_array)  
-    i = 0  
-    loop do
+    arr_length = num_array.length
+    p i_length = arr_length-1
+    i = 0 
+  while i < i_length do
       num_array.each_cons(2).map { |pair| 
       p "i = #{i}" 
       indexA = i
       indexB = i+1
       p pair = [num_array[indexA], num_array[indexB]]
-     a = pair[0]
+      a = pair[0]
       b = pair[1]     
-    if a > b
+   if a > b
   p   new_pair = pair.reverse()
       index_del = indexB + 1
   p   num_array.insert(indexA, b).insert(indexB, a)
