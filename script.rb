@@ -5,9 +5,10 @@ def bubble_sort(num_array)
   i = 0
   while i <= i_length-1 do
    if num_array.sorted?
-    puts "Finished!\n#{num_array}"
+    puts "#{num_array}\nFinished!"
     break
    elsif i == i_length-1
+      p num_array
       i = 0
    end
    num_array.each_cons(2).map { |pair| 
@@ -17,7 +18,7 @@ def bubble_sort(num_array)
     a = pair[0]
     b = pair[1]
       if (a > b) && (i < i_length-1)
-        p new_pair = pair.reverse
+        new_pair = pair.reverse
         index_del = indexB + 1
         num_array.insert(indexA, b).insert(indexB, a)
         2.times { num_array.delete_at(index_del) }
