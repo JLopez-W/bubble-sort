@@ -1,8 +1,7 @@
 num_array = [4,3,78,2,0,2]
 
   def bubble_sort(num_array)  
-    arr_length = num_array.length
-    p i_length = arr_length-1
+    i_length = num_array.length
     i = 0 
   while i < i_length do
       num_array.each_cons(2).map { |pair| 
