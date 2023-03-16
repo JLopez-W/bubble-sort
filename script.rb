@@ -4,6 +4,12 @@ num_array = [4,3,78,2,0,2]
     i_length = num_array.length
     i = 0 
   while i < i_length do
+    if num_array.sorted?
+      p num_array
+      break
+    elsif i == i_length-1 
+      i = 0
+    end
       num_array.each_cons(2).map { |pair| 
       p "i = #{i}" 
       indexA = i
@@ -27,6 +33,10 @@ num_array = [4,3,78,2,0,2]
     end     
   end 
 
-  bubble_sort(num_array)
+  module Enumerable
+    def sorted?
+      each_cons(2).all? { |a, b| (a <=> b) <= 0 }
+     end
+    end
 
-#p  num_array.each_cons(2).reduce(true) { |result, (a, b)| result && (a <=> b) < 0 }
+  bubble_sort(num_array)
