@@ -20,7 +20,6 @@ def bubble_sort(num_array)
         index_del = indexB + 1
         num_array.insert(indexA, b).insert(indexB, a)
         2.times { num_array.delete_at(index_del) }
-        num_array
         p num_array.flatten
         new_pair = nil
         if num_array.sorted?
