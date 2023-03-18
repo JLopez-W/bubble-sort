@@ -5,7 +5,6 @@ def bubble_sort(num_array)
   i = 0
   while i <= arr_length-1 do
     if i == arr_length-1 && num_array.sorted? == false
-      num_array
       i = 0
     end
    num_array.each_cons(2).map { |pair| 
